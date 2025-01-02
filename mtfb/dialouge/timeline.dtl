@@ -1,0 +1,15 @@
+LabGirl (vali): yo
+label go back
+LabGirl (vali): whassup
+[text_input var="Response"]
+if {Response} == "...":
+	LabGirl (casti): oki...
+	[wait time="3.0"]
+	jump go back
+if {Response} == "making a video":
+	LabGirl: ui ui
+	LabGirl: whats next
+	- custom style
+		LabGirl: Lets custom
+	- hihihi
+		LabGirl: .(
