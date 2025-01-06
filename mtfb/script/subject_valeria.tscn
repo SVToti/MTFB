@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://cguqxceeeiwb0"]
+
+[ext_resource type="PackedScene" uid="uid://beqtrg8dkvc83" path="res://script/subject_parent.tscn" id="1_fmucu"]
+[ext_resource type="Script" path="res://script/subject_valeria.gd" id="2_bac8g"]
+
+[node name="SubjectValeria" instance=ExtResource("1_fmucu")]
+script = ExtResource("2_bac8g")

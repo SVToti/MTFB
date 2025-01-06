@@ -1,15 +1,15 @@
-class_name Subj1
-extends CanvasLayer
+class_name Subject
+extends Control
 
 
 @export var stats : Stats
-var selected: bool = true
+@export var selected: bool = false
 
 func _ready() -> void:
 	if selected:
 		Dialogic.signal_event.connect(_on_dialogic_signal)
-	else:
-		Dialogic.signal_event.disconnect(_on_dialogic_signal)
+	#else:
+		#Dialogic.signal_event.disconnect(_on_dialogic_signal)
 
 func _on_dialogic_signal(argument):
 	if argument is Dictionary:
