@@ -7,26 +7,17 @@
 "prefix": "",
 "sound_mood_default": "",
 "sound_moods": {},
-"style": "cuztomstule",
+"style": "",
 "suffix": ""
 },
-"default_portrait": "Neutral",
+"default_portrait": "Creepy",
 "description": "",
-"display_name": "Dr. Ornella",
+"display_name": "Jack",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"Happy": {
-"export_overrides": {
-"image": ""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"Mad": {
+"Creepy": {
 "export_overrides": {
 "image": ""
 },
@@ -36,15 +27,6 @@
 "scene": ""
 },
 "Neutral": {
-"export_overrides": {
-"image": ""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"Sad": {
 "export_overrides": {
 "image": ""
 },

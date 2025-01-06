@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dru15fr4bm317"
-path="res://.godot/imported/castenzo.png-e09c4887ba6ea4d46bb240538f26cd49.ctex"
+uid="uid://b5vfy3bv32m6s"
+path="res://.godot/imported/Senza titolo.png-3afa97e943e6374a2e2df87751bab054.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://castenzo.png"
-dest_files=["res://.godot/imported/castenzo.png-e09c4887ba6ea4d46bb240538f26cd49.ctex"]
+source_file="res://images/Senza titolo.png"
+dest_files=["res://.godot/imported/Senza titolo.png-3afa97e943e6374a2e2df87751bab054.ctex"]
 
 [params]
 

@@ -1,15 +1,17 @@
-LabGirl (vali): yo
-label go back
-LabGirl (vali): whassup
-[text_input var="Response"]
-if {Response} == "...":
-	LabGirl (casti): oki...
-	[wait time="3.0"]
-	jump go back
-if {Response} == "making a video":
-	LabGirl: ui ui
-	LabGirl: whats next
-	- custom style
-		LabGirl: Lets custom
-	- hihihi
-		LabGirl: .(
+LabGirl (Neutral): Welcome to my Lab...
+LabGirl (Neutral): I'm Ornnella Von Ani, I'm a scientist...
+LabGirl (Happy): My Goal is to create the perfect woman!
+LabGirl (Happy): My Goal is to create the perfect woman!
+LabGirl (Happy): To do so I've created these subjects! 
+[signal arg="Highlight Cavie"]
+LabGirl (Sad): Don't worry they are not real women.
+LabGirl (Sad): They're like... Rats. Imagine them as overgrown rats who happen to look like women.
+[signal arg="STOP Highlight Cavie"]
+LabGirl (Happy): Now I need YOU to help me make them PERFECT.
+LabGirl (Mad): Those values you see... are what MEN look for in women.
+LabGirl (Happy): We need to max them out by fusing them together to...
+[signal arg="Highlight Dates"]
+LabGirl (Mad): Strip these LOSER from their money!
+LabGirl (Neutral): To do so, we need to send subjects with stats that are high enough for them to be fooled.
+[signal arg="STOP Highlight Dates"]
+LabGirl (Neutral): Let's start fusing!

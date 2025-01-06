@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Stats" load_steps=2 format=3 uid="uid://qoevlk6t2ik6"]
+
+[ext_resource type="Script" path="res://script/StartingStats.gd" id="1_e3vbg"]
+
+[resource]
+script = ExtResource("1_e3vbg")
+Survival = 5
+Boobs = 6
+Ass = 3
+Eyes = 4
+Skinnyness = 7

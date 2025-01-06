@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bldlvvcrecokf"]
+
+[ext_resource type="Script" path="res://script/game_sccene_.gd" id="1_fgon5"]
+[ext_resource type="Script" path="res://script/date_3.gd" id="2_qf4o6"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_fgon5")
+
+[node name="date 3" type="Button" parent="."]
+offset_top = 414.0
+offset_right = 269.0
+offset_bottom = 581.0
+script = ExtResource("2_qf4o6")
+
+[node name="date 2" type="Button" parent="."]
+offset_top = 207.0
+offset_right = 269.0
+offset_bottom = 374.0
+
+[node name="date 1" type="Button" parent="."]
+offset_right = 269.0
+offset_bottom = 167.0

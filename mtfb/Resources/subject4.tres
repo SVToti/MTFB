@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Stats" load_steps=2 format=3 uid="uid://dab4ok7detjar"]
+
+[ext_resource type="Script" path="res://script/StartingStats.gd" id="1_jgkwy"]
+
+[resource]
+script = ExtResource("1_jgkwy")
+Survival = 10
+Boobs = 1
+Ass = 1
+Eyes = 1
+Skinnyness = 1
