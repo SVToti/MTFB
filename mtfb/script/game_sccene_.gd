@@ -10,6 +10,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 
-func _on_dialogic_signal(argument: String):
-	if argument == "its signal":
-		print("a signal war")
+func _on_dialogic_signal(argument):
+	if argument is String:
+		if argument == "its signal":
+			print("a signal war")
