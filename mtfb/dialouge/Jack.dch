@@ -28,7 +28,7 @@
 },
 "Neutral": {
 "export_overrides": {
-"image": ""
+"image": "\"res://images/Marco andrei.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

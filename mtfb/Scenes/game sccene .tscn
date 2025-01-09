@@ -1,26 +1,33 @@
-[gd_scene load_steps=4 format=3 uid="uid://bldlvvcrecokf"]
+[gd_scene load_steps=7 format=3 uid="uid://bldlvvcrecokf"]
 
 [ext_resource type="Script" path="res://script/game_sccene_.gd" id="1_fgon5"]
 [ext_resource type="Script" path="res://script/date_3.gd" id="2_qf4o6"]
-[ext_resource type="PackedScene" uid="uid://cguqxceeeiwb0" path="res://script/subject_valeria.tscn" id="3_cuxuw"]
+[ext_resource type="PackedScene" uid="uid://cguqxceeeiwb0" path="res://script/subject_1.tscn" id="3_cuxuw"]
+[ext_resource type="PackedScene" uid="uid://cb6qestmjku2q" path="res://script/subject_3.tscn" id="3_j5jew"]
+[ext_resource type="PackedScene" uid="uid://uq2b63g7ysta" path="res://script/subject_2.tscn" id="5_rdjmf"]
+[ext_resource type="PackedScene" uid="uid://dg40b7qgmisd7" path="res://script/subject_4.tscn" id="6_412r3"]
 
 [node name="GameSccene" type="Node2D"]
+texture_filter = 1
+texture_repeat = 1
 script = ExtResource("1_fgon5")
 
+[node name="date 1" type="Button" parent="."]
+offset_right = 269.0
+offset_bottom = 167.0
+
 [node name="date 3" type="Button" parent="."]
+visible = false
 offset_top = 414.0
 offset_right = 269.0
 offset_bottom = 581.0
 script = ExtResource("2_qf4o6")
 
 [node name="date 2" type="Button" parent="."]
+visible = false
 offset_top = 207.0
 offset_right = 269.0
 offset_bottom = 374.0
-
-[node name="date 1" type="Button" parent="."]
-offset_right = 269.0
-offset_bottom = 167.0
 
 [node name="SubjectCanvas" type="CanvasLayer" parent="."]
 
@@ -35,29 +42,21 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 158.0
+offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 74
 alignment = 1
 
-[node name="SubjectValeria" parent="SubjectCanvas/Control/HBoxContainer" instance=ExtResource("3_cuxuw")]
+[node name="Subject3" parent="SubjectCanvas/Control/HBoxContainer" instance=ExtResource("3_j5jew")]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-selected = true
 
-[node name="SubjectValeria2" parent="SubjectCanvas/Control/HBoxContainer" instance=ExtResource("3_cuxuw")]
+[node name="Subject1" parent="SubjectCanvas/Control/HBoxContainer" instance=ExtResource("3_cuxuw")]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
 
-[node name="SubjectValeria3" parent="SubjectCanvas/Control/HBoxContainer" instance=ExtResource("3_cuxuw")]
+[node name="Subject2" parent="SubjectCanvas/Control/HBoxContainer" instance=ExtResource("5_rdjmf")]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-selected = true
 
-[node name="SubjectValeria4" parent="SubjectCanvas/Control/HBoxContainer" instance=ExtResource("3_cuxuw")]
+[node name="Subject4" parent="SubjectCanvas/Control/HBoxContainer" instance=ExtResource("6_412r3")]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
