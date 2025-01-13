@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://bh08ewa6xlsfl"]
+
+[ext_resource type="Script" path="res://Scenes/button_date.gd" id="1_lf2p4"]
+
+[node name="ButtonDate" type="Control"]
+layout_mode = 3
+anchor_right = 0.25
+anchor_bottom = 0.25
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lf2p4")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MARCO ANDREI OMGGG"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

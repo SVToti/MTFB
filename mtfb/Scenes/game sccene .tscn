@@ -1,43 +1,28 @@
-[gd_scene load_steps=7 format=3 uid="uid://bldlvvcrecokf"]
+[gd_scene load_steps=9 format=3 uid="uid://bldlvvcrecokf"]
 
 [ext_resource type="Script" path="res://script/game_sccene_.gd" id="1_fgon5"]
-[ext_resource type="Script" path="res://script/date_3.gd" id="2_qf4o6"]
 [ext_resource type="PackedScene" uid="uid://cguqxceeeiwb0" path="res://script/subject_1.tscn" id="3_cuxuw"]
 [ext_resource type="PackedScene" uid="uid://cb6qestmjku2q" path="res://script/subject_3.tscn" id="3_j5jew"]
 [ext_resource type="PackedScene" uid="uid://uq2b63g7ysta" path="res://script/subject_2.tscn" id="5_rdjmf"]
 [ext_resource type="PackedScene" uid="uid://dg40b7qgmisd7" path="res://script/subject_4.tscn" id="6_412r3"]
+[ext_resource type="PackedScene" uid="uid://bg83ci5wdoveb" path="res://Scenes/button_id.tscn" id="6_a3cw6"]
+[ext_resource type="PackedScene" uid="uid://y67a0jy4g7xx" path="res://Scenes/button_merge.tscn" id="7_8cs7w"]
+[ext_resource type="PackedScene" uid="uid://bh08ewa6xlsfl" path="res://Scenes/button_date.tscn" id="8_403aq"]
 
 [node name="GameSccene" type="Node2D"]
 texture_filter = 1
 texture_repeat = 1
 script = ExtResource("1_fgon5")
 
-[node name="date 1" type="Button" parent="."]
-offset_right = 269.0
-offset_bottom = 167.0
-
-[node name="date 3" type="Button" parent="."]
-visible = false
-offset_top = 414.0
-offset_right = 269.0
-offset_bottom = 581.0
-script = ExtResource("2_qf4o6")
-
-[node name="date 2" type="Button" parent="."]
-visible = false
-offset_top = 207.0
-offset_right = 269.0
-offset_bottom = 374.0
-
 [node name="SubjectCanvas" type="CanvasLayer" parent="."]
 
-[node name="Control" type="Control" parent="SubjectCanvas"]
+[node name="LayoutTipe" type="Control" parent="SubjectCanvas"]
 layout_mode = 3
 anchor_left = 0.25
 anchor_right = 0.75
 anchor_bottom = 0.75
 
-[node name="HBoxContainer" type="HBoxContainer" parent="SubjectCanvas/Control"]
+[node name="HBoxContainer" type="HBoxContainer" parent="SubjectCanvas/LayoutTipe"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -49,14 +34,54 @@ grow_vertical = 2
 theme_override_constants/separation = 74
 alignment = 1
 
-[node name="Subject3" parent="SubjectCanvas/Control/HBoxContainer" instance=ExtResource("3_j5jew")]
+[node name="Subject1" parent="SubjectCanvas/LayoutTipe/HBoxContainer" instance=ExtResource("3_cuxuw")]
 layout_mode = 2
 
-[node name="Subject1" parent="SubjectCanvas/Control/HBoxContainer" instance=ExtResource("3_cuxuw")]
+[node name="Subject2" parent="SubjectCanvas/LayoutTipe/HBoxContainer" instance=ExtResource("5_rdjmf")]
 layout_mode = 2
 
-[node name="Subject2" parent="SubjectCanvas/Control/HBoxContainer" instance=ExtResource("5_rdjmf")]
+[node name="Subject3" parent="SubjectCanvas/LayoutTipe/HBoxContainer" instance=ExtResource("3_j5jew")]
 layout_mode = 2
 
-[node name="Subject4" parent="SubjectCanvas/Control/HBoxContainer" instance=ExtResource("6_412r3")]
+[node name="Subject4" parent="SubjectCanvas/LayoutTipe/HBoxContainer" instance=ExtResource("6_412r3")]
 layout_mode = 2
+
+[node name="LayoutBottoni" type="Control" parent="SubjectCanvas"]
+layout_mode = 3
+anchor_left = 0.25
+anchor_top = 0.7
+anchor_right = 0.95
+anchor_bottom = 0.8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SubjectCanvas/LayoutBottoni"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="ButtonId" parent="SubjectCanvas/LayoutBottoni/HBoxContainer" node_paths=PackedStringArray("button_subject") instance=ExtResource("6_a3cw6")]
+layout_mode = 2
+button_subject = NodePath("../../../LayoutTipe/HBoxContainer/Subject1")
+
+[node name="ButtonId2" parent="SubjectCanvas/LayoutBottoni/HBoxContainer" node_paths=PackedStringArray("button_subject") instance=ExtResource("6_a3cw6")]
+layout_mode = 2
+button_subject = NodePath("../../../LayoutTipe/HBoxContainer/Subject2")
+
+[node name="ButtonId3" parent="SubjectCanvas/LayoutBottoni/HBoxContainer" node_paths=PackedStringArray("button_subject") instance=ExtResource("6_a3cw6")]
+layout_mode = 2
+button_subject = NodePath("../../../LayoutTipe/HBoxContainer/Subject3")
+
+[node name="ButtonId4" parent="SubjectCanvas/LayoutBottoni/HBoxContainer" node_paths=PackedStringArray("button_subject") instance=ExtResource("6_a3cw6")]
+layout_mode = 2
+button_subject = NodePath("../../../LayoutTipe/HBoxContainer/Subject4")
+
+[node name="ButtonMerge" parent="SubjectCanvas" instance=ExtResource("7_8cs7w")]
+
+[node name="ButtonDate" parent="SubjectCanvas" instance=ExtResource("8_403aq")]
+
+[connection signal="date_end" from="SubjectCanvas/ButtonDate" to="." method="_on_button_date_date_end"]
+[connection signal="date_start" from="SubjectCanvas/ButtonDate" to="." method="_on_button_date_date_start"]

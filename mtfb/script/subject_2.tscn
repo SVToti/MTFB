@@ -1,8 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://uq2b63g7ysta"]
+[gd_scene load_steps=4 format=3 uid="uid://uq2b63g7ysta"]
 
 [ext_resource type="PackedScene" uid="uid://beqtrg8dkvc83" path="res://script/subject_parent.tscn" id="1_sgsoy"]
 [ext_resource type="Script" path="res://script/subject_2.gd" id="2_yabnk"]
+[ext_resource type="Resource" uid="uid://bo2q7x55j31py" path="res://Resources/Subject2.tres" id="3_lnel8"]
 
 [node name="Subject2" instance=ExtResource("1_sgsoy")]
 script = ExtResource("2_yabnk")
-stats = null
+stats = ExtResource("3_lnel8")

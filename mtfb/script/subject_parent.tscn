@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://beqtrg8dkvc83"]
+[gd_scene load_steps=40 format=3 uid="uid://beqtrg8dkvc83"]
 
 [ext_resource type="Script" path="res://script/subject.gd" id="1_5b3yb"]
 [ext_resource type="Resource" uid="uid://qoevlk6t2ik6" path="res://Resources/Subject1.tres" id="2_50swe"]
@@ -15,51 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://ov38606awcvf" path="res://images/Skinny Big.png" id="10_87ite"]
 [ext_resource type="Texture2D" uid="uid://dtx0ocuyqbcpr" path="res://images/Skinny Biggest.png" id="11_35njl"]
 [ext_resource type="Texture2D" uid="uid://7054po5xq5q0" path="res://images/Boobs bigpng.png" id="14_1pk2s"]
-
-[sub_resource type="Animation" id="Animation_3mv4d"]
-resource_name = "Mini Eyes"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("5_81ebe")]
-}
-
-[sub_resource type="Animation" id="Animation_qtoum"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("4_yvv5p")]
-}
-
-[sub_resource type="Animation" id="Animation_ayfxw"]
-resource_name = "Medium Eyes"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("6_wpcj6")]
-}
+[ext_resource type="Texture2D" uid="uid://brgmvi6euc44k" path="res://images/Boobs Biggest.png" id="15_1x82y"]
+[ext_resource type="Texture2D" uid="uid://buwymncicr8xa" path="res://images/Boobs medium.png" id="16_jq21f"]
+[ext_resource type="Texture2D" uid="uid://yo5eim0e8jpk" path="res://images/Boobs tiny.png" id="16_yup1b"]
 
 [sub_resource type="Animation" id="Animation_g2b68"]
 resource_name = "Big Eyes"
@@ -106,18 +64,8 @@ tracks/0/keys = {
 "values": [ExtResource("4_yvv5p")]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_cd6tx"]
-_data = {
-"Big Eyes": SubResource("Animation_g2b68"),
-"Biggest Eyes": SubResource("Animation_oyafl"),
-"MAXIMUM Eyes": SubResource("Animation_6jh2m"),
-"Medium Eyes": SubResource("Animation_ayfxw"),
-"Mini Eyes": SubResource("Animation_3mv4d"),
-"RESET": SubResource("Animation_qtoum")
-}
-
-[sub_resource type="Animation" id="Animation_7qcxx"]
-resource_name = "Minimum Skinny"
+[sub_resource type="Animation" id="Animation_ayfxw"]
+resource_name = "Medium Eyes"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -128,10 +76,25 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("9_27n8p")]
+"values": [ExtResource("6_wpcj6")]
 }
 
-[sub_resource type="Animation" id="Animation_0fwvp"]
+[sub_resource type="Animation" id="Animation_3mv4d"]
+resource_name = "Mini Eyes"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_81ebe")]
+}
+
+[sub_resource type="Animation" id="Animation_qtoum"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -143,7 +106,17 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("9_27n8p")]
+"values": [ExtResource("4_yvv5p")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cd6tx"]
+_data = {
+"Big Eyes": SubResource("Animation_g2b68"),
+"Biggest Eyes": SubResource("Animation_oyafl"),
+"MAXIMUM Eyes": SubResource("Animation_6jh2m"),
+"Medium Eyes": SubResource("Animation_ayfxw"),
+"Mini Eyes": SubResource("Animation_3mv4d"),
+"RESET": SubResource("Animation_qtoum")
 }
 
 [sub_resource type="Animation" id="Animation_j2vyh"]
@@ -176,21 +149,6 @@ tracks/0/keys = {
 "values": [ExtResource("11_35njl")]
 }
 
-[sub_resource type="Animation" id="Animation_a1hs7"]
-resource_name = "Medium Skinny"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [null]
-}
-
 [sub_resource type="Animation" id="Animation_rb2im"]
 resource_name = "Maximum Skinny"
 tracks/0/type = "value"
@@ -206,6 +164,51 @@ tracks/0/keys = {
 "values": [ExtResource("5_on01x")]
 }
 
+[sub_resource type="Animation" id="Animation_a1hs7"]
+resource_name = "Medium Skinny"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_27n8p")]
+}
+
+[sub_resource type="Animation" id="Animation_7qcxx"]
+resource_name = "Minimum Skinny"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_27n8p")]
+}
+
+[sub_resource type="Animation" id="Animation_0fwvp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_27n8p")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gs4tk"]
 _data = {
 "Big Skinny": SubResource("Animation_j2vyh"),
@@ -214,6 +217,36 @@ _data = {
 "Medium Skinny": SubResource("Animation_a1hs7"),
 "Minimum Skinny": SubResource("Animation_7qcxx"),
 "RESET": SubResource("Animation_0fwvp")
+}
+
+[sub_resource type="Animation" id="Animation_lqiv6"]
+resource_name = "Big Boobs"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("14_1pk2s")]
+}
+
+[sub_resource type="Animation" id="Animation_y8bjl"]
+resource_name = "Biggest Boobs"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("15_1x82y")]
 }
 
 [sub_resource type="Animation" id="Animation_qxgo2"]
@@ -245,21 +278,9 @@ tracks/0/keys = {
 "update": 1,
 "values": [ExtResource("6_7evab")]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:expand_mode")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
 
-[sub_resource type="Animation" id="Animation_lqiv6"]
-resource_name = "Big Boobs"
+[sub_resource type="Animation" id="Animation_adnpo"]
+resource_name = "minimum booba"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -270,22 +291,22 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("14_1pk2s")]
+"values": [ExtResource("16_yup1b")]
 }
 
-[sub_resource type="Animation" id="Animation_y8bjl"]
-resource_name = "Biggest Boobs"
+[sub_resource type="Animation" id="Animation_bfmfc"]
+resource_name = "medium boobs"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:expand_mode")
+tracks/0/path = NodePath(".:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [ExtResource("16_jq21f")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fr6st"]
@@ -293,7 +314,9 @@ _data = {
 "Big Boobs": SubResource("Animation_lqiv6"),
 "Biggest Boobs": SubResource("Animation_y8bjl"),
 "MAXIMUM BOOBS": SubResource("Animation_qxgo2"),
-"RESET": SubResource("Animation_252ij")
+"RESET": SubResource("Animation_252ij"),
+"medium boobs": SubResource("Animation_bfmfc"),
+"minimum booba": SubResource("Animation_adnpo")
 }
 
 [node name="SubjectParent" type="Control"]
@@ -331,7 +354,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_yvv5p")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect/Face"]
+[node name="FaceAnim" type="AnimationPlayer" parent="TextureRect/Face"]
 libraries = {
 "": SubResource("AnimationLibrary_cd6tx")
 }
@@ -345,7 +368,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("9_27n8p")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect/Skinny"]
+[node name="SkinnyAnim" type="AnimationPlayer" parent="TextureRect/Skinny"]
 libraries = {
 "": SubResource("AnimationLibrary_gs4tk")
 }
@@ -359,7 +382,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("6_7evab")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect/Boobs"]
+[node name="BoobsAnim" type="AnimationPlayer" parent="TextureRect/Boobs"]
 libraries = {
 "": SubResource("AnimationLibrary_fr6st")
 }
